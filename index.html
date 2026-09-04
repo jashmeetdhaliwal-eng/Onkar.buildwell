@@ -1,1244 +1,1475 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Onkar Buildwell | Building Trust • Creating Spaces</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-
-<style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    scroll-behavior:smooth;
-}
-
-body{
-    font-family:'DM Sans',sans-serif;
-    background:#faf9f5;
-    color:#102d48;
-    line-height:1.7;
-}
-
-/* ================= HEADER ================= */
-
-header{
-    position:sticky;
-    top:0;
-    z-index:1000;
-    background:rgba(255,255,255,0.97);
-    border-bottom:1px solid #e8e1d3;
-    box-shadow:0 3px 15px rgba(16,45,72,0.06);
-}
-
-.header-container{
-    max-width:1250px;
-    margin:auto;
-    padding:12px 30px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:30px;
-}
-
-/* LOGO */
-
-.logo{
-    height:75px;
-    width:auto;
-    object-fit:contain;
-    display:block;
-}
-
-/* NAVIGATION */
-
-nav{
-    display:flex;
-    align-items:center;
-    gap:8px;
-}
-
-nav a{
-    text-decoration:none;
-    color:#102d48;
-    font-weight:600;
-    font-size:15px;
-
-    padding:11px 22px;
-
-    border:1px solid #ddd5c5;
-    border-radius:6px;
-
-    background:#fff;
-
-    transition:all 0.3s ease;
-}
-
-nav a:hover{
-    background:#bd8b27;
-    color:white;
-    border-color:#bd8b27;
-    transform:translateY(-2px);
-}
-
-/* ================= HERO ================= */
-
-.hero{
-    min-height:calc(100vh - 100px);
-    display:flex;
-    align-items:center;
-
-    background:
-    radial-gradient(circle at 85% 30%,rgba(189,139,39,0.13),transparent 28%),
-    radial-gradient(circle at 10% 80%,rgba(16,45,72,0.08),transparent 25%);
-
-    padding:80px 7%;
-}
-
-.hero-content{
-    max-width:1250px;
-    width:100%;
-    margin:auto;
-
-    display:grid;
-    grid-template-columns:1.05fr 0.95fr;
-    gap:80px;
-    align-items:center;
-}
-
-.small-title{
-    color:#bd8b27;
-    font-size:14px;
-    font-weight:700;
-    letter-spacing:5px;
-    text-transform:uppercase;
-    margin-bottom:20px;
-}
-
-.hero h1{
-    font-family:'Playfair Display',serif;
-    font-size:72px;
-    line-height:1.02;
-    color:#102d48;
-    margin-bottom:25px;
-}
-
-.hero h1 span{
-    color:#bd8b27;
-}
-
-.hero p{
-    color:#526b82;
-    font-size:18px;
-    max-width:650px;
-    margin-bottom:35px;
-}
-
-.buttons{
-    display:flex;
-    gap:15px;
-    flex-wrap:wrap;
-}
-
-.btn{
-    display:inline-block;
-    padding:14px 28px;
-    border-radius:5px;
-    text-decoration:none;
-    font-weight:700;
-    transition:0.3s;
-}
-
-.btn-primary{
-    background:#102d48;
-    color:white;
-}
-
-.btn-primary:hover{
-    background:#bd8b27;
-}
-
-.btn-secondary{
-    border:1px solid #bd8b27;
-    color:#102d48;
-    background:white;
-}
-
-.btn-secondary:hover{
-    background:#bd8b27;
-    color:white;
-}
-
-/* HERO LOGO CARD */
-
-.hero-card{
-    background:white;
-    border:1px solid #e8dfcf;
-    border-radius:20px;
-    padding:35px;
-
-    box-shadow:0 25px 60px rgba(16,45,72,0.10);
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-}
-
-.hero-card img{
-    width:100%;
-    max-width:430px;
-    height:auto;
-}
-
-/* ================= COMMON SECTION ================= */
-
-section{
-    padding:90px 7%;
-}
-
-.section-container{
-    max-width:1200px;
-    margin:auto;
-}
-
-.section-heading{
-    text-align:center;
-    margin-bottom:55px;
-}
-
-.section-heading .small-title{
-    margin-bottom:8px;
-}
-
-.section-heading h2{
-    font-family:'Playfair Display',serif;
-    font-size:48px;
-    color:#102d48;
-}
-
-.section-heading p{
-    max-width:700px;
-    margin:12px auto 0;
-    color:#65798b;
-}
-
-/* ================= ABOUT ================= */
-
-.about{
-    background:white;
-}
-
-.about-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:60px;
-    align-items:center;
-}
-
-.about-text h3{
-    font-family:'Playfair Display',serif;
-    font-size:34px;
-    margin-bottom:20px;
-}
-
-.about-text p{
-    color:#5b7185;
-    margin-bottom:18px;
-}
-
-.about-boxes{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:18px;
-}
-
-.about-box{
-    padding:25px;
-    background:#faf9f5;
-    border:1px solid #e8dfcf;
-    border-radius:8px;
-}
-
-.about-box h4{
-    color:#bd8b27;
-    margin-bottom:7px;
-}
-
-.about-box p{
-    font-size:14px;
-    color:#607487;
-}
-
-/* ================= MATERIALS ================= */
-
-.materials{
-    background:#f5f2eb;
-}
-
-.material-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:20px;
-}
-
-.material-card{
-    background:white;
-    border:1px solid #e3dbcb;
-    padding:27px 22px;
-    border-radius:8px;
-
-    transition:0.3s;
-}
-
-.material-card:hover{
-    transform:translateY(-7px);
-    box-shadow:0 15px 35px rgba(16,45,72,0.10);
-    border-color:#bd8b27;
-}
-
-.material-number{
-    font-family:'Playfair Display',serif;
-    color:#bd8b27;
-    font-size:22px;
-    margin-bottom:8px;
-}
-
-.material-card h3{
-    font-size:19px;
-    margin-bottom:9px;
-}
-
-.material-card p{
-    color:#667a8c;
-    font-size:14px;
-}
-
-/* ================= RMC ================= */
-
-.rmc{
-    background:white;
-}
-
-.rmc-box{
-    background:#102d48;
-    color:white;
-    border-radius:15px;
-    padding:60px;
-
-    display:grid;
-    grid-template-columns:1.2fr 0.8fr;
-    gap:50px;
-    align-items:center;
-}
-
-.rmc-box h2{
-    font-family:'Playfair Display',serif;
-    font-size:45px;
-    margin-bottom:20px;
-}
-
-.rmc-box p{
-    color:#d8e0e7;
-    margin-bottom:20px;
-}
-
-.locations{
-    display:flex;
-    flex-wrap:wrap;
-    gap:10px;
-}
-
-.location{
-    border:1px solid rgba(255,255,255,0.3);
-    padding:9px 15px;
-    border-radius:30px;
-    font-size:14px;
-}
-
-.rmc-highlight{
-    background:#bd8b27;
-    padding:35px;
-    border-radius:10px;
-    text-align:center;
-}
-
-.rmc-highlight h3{
-    font-family:'Playfair Display',serif;
-    font-size:32px;
-    margin-bottom:8px;
-}
-
-.rmc-highlight p{
-    margin:0;
-    color:white;
-}
-
-/* ================= WHY US ================= */
-
-.why{
-    background:#f5f2eb;
-}
-
-.why-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:20px;
-}
-
-.why-card{
-    text-align:center;
-    background:white;
-    padding:35px 20px;
-    border-radius:8px;
-    border:1px solid #e3dbcb;
-}
-
-.icon{
-    width:55px;
-    height:55px;
-    margin:0 auto 18px;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    background:#f7f0df;
-    color:#bd8b27;
-
-    border-radius:50%;
-    font-size:23px;
-}
-
-.why-card h3{
-    margin-bottom:8px;
-}
-
-.why-card p{
-    font-size:14px;
-    color:#697c8d;
-}
-
-/* ================= CONTACT ================= */
-
-.contact{
-    background:white;
-}
-
-.contact-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:30px;
-}
-
-.contact-card{
-    padding:35px;
-    border:1px solid #e2dacb;
-    border-radius:10px;
-    background:#faf9f5;
-}
-
-.contact-card h3{
-    font-family:'Playfair Display',serif;
-    font-size:30px;
-    margin-bottom:25px;
-}
-
-.contact-item{
-    margin-bottom:22px;
-}
-
-.contact-item span{
-    display:block;
-    color:#bd8b27;
-    font-size:13px;
-    font-weight:700;
-    text-transform:uppercase;
-    letter-spacing:1px;
-}
-
-.contact-item strong{
-    font-size:17px;
-    color:#102d48;
-}
-
-.contact-item a{
-    color:#102d48;
-    text-decoration:none;
-}
-
-.contact-item a:hover{
-    color:#bd8b27;
-}
-
-/* ================= FOOTER ================= */
-
-footer{
-    background:#102d48;
-    color:white;
-    text-align:center;
-    padding:30px 20px;
-}
-
-footer img{
-    height:55px;
-    background:white;
-    padding:5px;
-    border-radius:5px;
-    margin-bottom:10px;
-}
-
-footer p{
-    color:#c9d3dc;
-    font-size:14px;
-}
-
-.gold{
-    color:#bd8b27;
-}
-
-/* ================= MOBILE ================= */
-
-@media(max-width:1000px){
-
-    .header-container{
-        flex-direction:column;
-        gap:15px;
-    }
-
-    nav{
-        flex-wrap:wrap;
-        justify-content:center;
-    }
-
-    .hero-content{
-        grid-template-columns:1fr;
-    }
-
-    .hero h1{
-        font-size:55px;
-    }
-
-    .material-grid,
-    .why-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .rmc-box{
-        grid-template-columns:1fr;
-    }
-
-}
-
-@media(max-width:650px){
-
-    .header-container{
-        padding:10px 15px;
-    }
-
-    .logo{
-        height:65px;
-    }
-
-    nav a{
-        padding:8px 12px;
-        font-size:13px;
-    }
-
-    .hero{
-        padding:60px 20px;
-    }
-
-    .hero h1{
-        font-size:45px;
-    }
-
-    .hero p{
-        font-size:16px;
-    }
-
-    section{
-        padding:65px 20px;
-    }
-
-    .section-heading h2{
-        font-size:38px;
-    }
-
-    .about-grid,
-    .contact-grid{
-        grid-template-columns:1fr;
-    }
-
-    .about-boxes{
-        grid-template-columns:1fr;
-    }
-
-    .material-grid,
-    .why-grid{
-        grid-template-columns:1fr;
-    }
-
-    .rmc-box{
-        padding:35px 25px;
-    }
-
-    .rmc-box h2{
-        font-size:36px;
-    }
-
-}
-
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Onkar Buildwell | Building Trust • Creating Spaces</title>
+
+    <meta name="description" content="Onkar Buildwell - Quality construction materials, RMC and concrete solutions.">
+
+    <!-- Elegant Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --navy: #102f4a;
+            --navy-dark: #09243a;
+            --gold: #c99532;
+            --gold-light: #e5c982;
+            --cream: #faf9f5;
+            --white: #ffffff;
+            --text: #29445d;
+            --light-blue: #eef4f7;
+            --border: #e4dccb;
+        }
+
+        body {
+            font-family: "DM Sans", sans-serif;
+            background: var(--cream);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        /* ================= NAVBAR ================= */
+
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255,255,255,0.96);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .nav-container {
+            width: min(1200px, 92%);
+            margin: auto;
+            min-height: 105px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        /* LOGO */
+
+        .logo-box {
+            height: 92px;
+            width: 185px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex-shrink: 0;
+        }
+
+        .logo-box img {
+            display: block;
+            width: 175px;
+            height: auto;
+            max-height: 88px;
+            object-fit: contain;
+        }
+
+        /* NAVIGATION */
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 9px;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--navy);
+            font-weight: 600;
+            font-size: 15px;
+            padding: 13px 20px;
+            border: 1px solid var(--border);
+            border-radius: 7px;
+            background: #fff;
+            transition: all 0.25s ease;
+        }
+
+        .nav-links a:hover {
+            background: var(--navy);
+            color: white;
+            border-color: var(--navy);
+            transform: translateY(-2px);
+        }
+
+        /* ================= HERO ================= */
+
+        .hero {
+            min-height: 720px;
+            position: relative;
+            overflow: hidden;
+            background:
+                radial-gradient(circle at 85% 30%, rgba(201,149,50,0.13), transparent 30%),
+                radial-gradient(circle at 10% 90%, rgba(16,47,74,0.08), transparent 28%),
+                var(--cream);
+        }
+
+        .hero-container {
+            width: min(1200px, 92%);
+            margin: auto;
+            min-height: 720px;
+            display: grid;
+            grid-template-columns: 1.05fr 0.95fr;
+            align-items: center;
+            gap: 70px;
+        }
+
+        .eyebrow {
+            color: var(--gold);
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 5px;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            font-family: "Playfair Display", serif;
+            color: var(--navy);
+            font-size: clamp(52px, 6vw, 82px);
+            line-height: 0.98;
+            font-weight: 600;
+            letter-spacing: -2px;
+        }
+
+        .hero h1 span {
+            color: var(--gold);
+        }
+
+        .hero-text {
+            max-width: 650px;
+            margin-top: 30px;
+            font-size: 18px;
+            color: #48647c;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 38px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            text-decoration: none;
+            padding: 15px 28px;
+            border-radius: 6px;
+            font-weight: 700;
+            transition: 0.25s ease;
+        }
+
+        .btn-primary {
+            background: var(--navy);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--navy-dark);
+            transform: translateY(-3px);
+        }
+
+        .btn-outline {
+            color: var(--navy);
+            border: 1px solid var(--gold);
+            background: white;
+        }
+
+        .btn-outline:hover {
+            background: var(--gold);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        /* HERO LOGO CARD */
+
+        .hero-card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 28px;
+            padding: 30px;
+            box-shadow: 0 25px 70px rgba(16,47,74,0.10);
+        }
+
+        .hero-logo-area {
+            min-height: 430px;
+            border-radius: 20px;
+            background: linear-gradient(145deg, #f4f3ef, #ffffff);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 35px;
+        }
+
+        .hero-logo-area img {
+            width: min(390px, 90%);
+            height: auto;
+            display: block;
+            object-fit: contain;
+        }
+
+        /* ================= SECTION COMMON ================= */
+
+        section {
+            padding: 100px 0;
+        }
+
+        .section-container {
+            width: min(1100px, 92%);
+            margin: auto;
+        }
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 55px;
+        }
+
+        .section-heading small {
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-weight: 700;
+        }
+
+        .section-heading h2 {
+            margin-top: 10px;
+            font-family: "Playfair Display", serif;
+            font-size: clamp(38px, 5vw, 58px);
+            line-height: 1.1;
+            color: var(--navy);
+        }
+
+        .section-heading p {
+            max-width: 650px;
+            margin: 18px auto 0;
+            color: #607589;
+        }
+
+        /* ================= ABOUT ================= */
+
+        #about {
+            background: white;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .about-content h3 {
+            font-family: "Playfair Display", serif;
+            color: var(--navy);
+            font-size: 38px;
+            margin-bottom: 20px;
+        }
+
+        .about-content p {
+            margin-bottom: 18px;
+            color: #587086;
+        }
+
+        .about-boxes {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+
+        .about-box {
+            padding: 28px;
+            background: var(--cream);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            transition: 0.25s ease;
+        }
+
+        .about-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(16,47,74,0.08);
+        }
+
+        .about-box strong {
+            display: block;
+            color: var(--navy);
+            font-size: 18px;
+            margin-bottom: 6px;
+        }
+
+        .about-box span {
+            color: #718397;
+            font-size: 14px;
+        }
+
+        /* ================= MATERIALS ================= */
+
+        #materials {
+            background: var(--cream);
+        }
+
+        .materials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .material-card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 13px;
+            padding: 28px;
+            transition: 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .material-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--gold);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: 0.3s ease;
+        }
+
+        .material-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 18px 40px rgba(16,47,74,0.10);
+        }
+
+        .material-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .material-number {
+            color: var(--gold);
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .material-card h3 {
+            font-family: "Playfair Display", serif;
+            color: var(--navy);
+            font-size: 25px;
+            margin: 10px 0;
+        }
+
+        .material-card p {
+            font-size: 14px;
+            color: #687d90;
+        }
+
+        /* ================= RMC ================= */
+
+        #rmc {
+            background: var(--navy);
+            color: white;
+        }
+
+        .rmc-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .rmc-content small {
+            color: var(--gold-light);
+            letter-spacing: 4px;
+            font-weight: 700;
+        }
+
+        .rmc-content h2 {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(40px, 5vw, 60px);
+            line-height: 1.1;
+            margin: 15px 0 22px;
+        }
+
+        .rmc-content p {
+            color: #d1dce5;
+            margin-bottom: 25px;
+        }
+
+        .rmc-list {
+            list-style: none;
+        }
+
+        .rmc-list li {
+            padding: 13px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.15);
+            color: #e4ebf0;
+        }
+
+        .rmc-list li::before {
+            content: "✓";
+            color: var(--gold-light);
+            font-weight: bold;
+            margin-right: 12px;
+        }
+
+        .rmc-card {
+            background: rgba(255,255,255,0.07);
+            border: 1px solid rgba(255,255,255,0.15);
+            padding: 40px;
+            border-radius: 18px;
+        }
+
+        .rmc-card h3 {
+            font-family: "Playfair Display", serif;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .location {
+            background: rgba(201,149,50,0.15);
+            border-left: 3px solid var(--gold);
+            padding: 18px;
+            margin-top: 25px;
+            color: #edf2f5;
+        }
+
+        /* ================= WHY US ================= */
+
+        #why-us {
+            background: white;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .why-card {
+            text-align: center;
+            padding: 35px 20px;
+            background: var(--cream);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+        }
+
+        .why-icon {
+            width: 55px;
+            height: 55px;
+            margin: 0 auto 18px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--navy);
+            color: var(--gold-light);
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .why-card h3 {
+            color: var(--navy);
+            margin-bottom: 8px;
+        }
+
+        .why-card p {
+            color: #718397;
+            font-size: 14px;
+        }
+
+        /* ================= CONTACT ================= */
+
+        #contact {
+            background:
+                radial-gradient(circle at 85% 15%, rgba(201,149,50,0.13), transparent 30%),
+                var(--cream);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .contact-info h2 {
+            font-family: "Playfair Display", serif;
+            font-size: 52px;
+            line-height: 1.1;
+            color: var(--navy);
+            margin: 12px 0 20px;
+        }
+
+        .contact-info > p {
+            color: #61788d;
+            margin-bottom: 35px;
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 18px;
+            padding: 18px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .contact-icon {
+            width: 42px;
+            height: 42px;
+            flex-shrink: 0;
+            border-radius: 50%;
+            background: var(--navy);
+            color: var(--gold-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .contact-item strong {
+            display: block;
+            color: var(--navy);
+            margin-bottom: 3px;
+        }
+
+        .contact-item a {
+            color: #5c7489;
+            text-decoration: none;
+        }
+
+        .contact-item a:hover {
+            color: var(--gold);
+        }
+
+        .contact-card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            padding: 40px;
+            box-shadow: 0 20px 50px rgba(16,47,74,0.08);
+        }
+
+        .contact-card h3 {
+            font-family: "Playfair Display", serif;
+            color: var(--navy);
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        .contact-card p {
+            color: #667c90;
+            margin-bottom: 20px;
+        }
+
+        .call-buttons {
+            display: grid;
+            gap: 12px;
+        }
+
+        .call-btn {
+            display: block;
+            text-decoration: none;
+            padding: 15px 20px;
+            border-radius: 7px;
+            border: 1px solid var(--border);
+            color: var(--navy);
+            font-weight: 700;
+            background: var(--cream);
+            transition: 0.25s ease;
+        }
+
+        .call-btn:hover {
+            background: var(--navy);
+            color: white;
+            border-color: var(--navy);
+        }
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            background: var(--navy-dark);
+            color: white;
+            padding: 45px 0 25px;
+        }
+
+        .footer-container {
+            width: min(1100px, 92%);
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .footer-logo img {
+            width: 65px;
+            height: 65px;
+            object-fit: contain;
+            background: white;
+            border-radius: 8px;
+        }
+
+        .footer-logo strong {
+            font-family: "Playfair Display", serif;
+            font-size: 24px;
+        }
+
+        .footer-logo span {
+            display: block;
+            color: var(--gold-light);
+            font-size: 12px;
+            letter-spacing: 2px;
+        }
+
+        .copyright {
+            color: #b9c6d0;
+            font-size: 13px;
+            text-align: right;
+        }
+
+        /* ================= RESPONSIVE ================= */
+
+        @media (max-width: 950px) {
+
+            .nav-container {
+                min-height: auto;
+                padding: 15px 0;
+                flex-direction: column;
+            }
+
+            .logo-box {
+                width: auto;
+                height: auto;
+                justify-content: center;
+            }
+
+            .logo-box img {
+                width: 155px;
+                max-height: 80px;
+            }
+
+            .nav-links {
+                justify-content: center;
+            }
+
+            .hero-container {
+                grid-template-columns: 1fr;
+                padding: 80px 0;
+            }
+
+            .hero {
+                min-height: auto;
+            }
+
+            .hero-container {
+                min-height: auto;
+            }
+
+            .hero-card {
+                max-width: 650px;
+                width: 100%;
+                margin: auto;
+            }
+
+            .about-grid,
+            .rmc-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .materials-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .why-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            section {
+                padding: 70px 0;
+            }
+
+            .nav-links {
+                width: 100%;
+                gap: 6px;
+            }
+
+            .nav-links a {
+                font-size: 13px;
+                padding: 10px 12px;
+            }
+
+            .hero h1 {
+                font-size: 50px;
+            }
+
+            .hero-text {
+                font-size: 16px;
+            }
+
+            .hero-logo-area {
+                min-height: 300px;
+            }
+
+            .materials-grid,
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-boxes {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-info h2 {
+                font-size: 42px;
+            }
+
+            .contact-card {
+                padding: 28px;
+            }
+
+            .footer-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .copyright {
+                text-align: center;
+            }
+        }
+
+    </style>
 </head>
-
 
 <body>
 
-<!-- ================= HEADER ================= -->
+    <!-- ================= NAVBAR ================= -->
 
-<header>
+    <header class="navbar">
 
-<div class="header-container">
+        <div class="nav-container">
 
-    <!-- YOUR LOGO -->
-    <a href="#home">
-        <img src="QB.png" alt="Onkar Buildwell Logo" class="logo">
-    </a>
-
-    <!-- NAVIGATION -->
-    <nav>
-
-        <a href="#home">Home</a>
-
-        <a href="#about">About Us</a>
-
-        <a href="#materials">Materials</a>
-
-        <a href="#rmc">RMC</a>
-
-        <a href="#why">Why Us</a>
-
-        <a href="#contact">Contact</a>
-
-    </nav>
-
-</div>
-
-</header>
-
-
-<!-- ================= HERO ================= -->
-
-<section class="hero" id="home">
-
-<div class="hero-content">
-
-<div>
-
-    <div class="small-title">
-        Building Trust • Creating Spaces
-    </div>
-
-    <h1>
-        Strong<br>
-        Foundations.<br>
-        <span>Better Futures.</span>
-    </h1>
-
-    <p>
-        Onkar Buildwell provides dependable construction materials
-        and concrete solutions designed to support stronger,
-        safer and better-built spaces.
-    </p>
-
-    <div class="buttons">
-
-        <a href="#materials" class="btn btn-primary">
-            Explore Materials
-        </a>
-
-        <a href="#contact" class="btn btn-secondary">
-            Contact Us
-        </a>
-
-    </div>
-
-</div>
-
-
-<div class="hero-card">
-
-    <img src="QB.png" alt="Onkar Buildwell">
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ================= ABOUT ================= -->
-
-<section class="about" id="about">
-
-<div class="section-container">
-
-<div class="section-heading">
-
-    <div class="small-title">
-        About Onkar Buildwell
-    </div>
-
-    <h2>Building More Than Structures</h2>
-
-    <p>
-        Quality materials, dependable service and relationships
-        built to last.
-    </p>
-
-</div>
-
-
-<div class="about-grid">
-
-<div class="about-text">
-
-    <h3>
-        Reliable Materials.<br>
-        Stronger Construction.
-    </h3>
-
-    <p>
-        Onkar Buildwell is focused on supplying reliable
-        construction materials and concrete solutions for
-        residential, commercial and infrastructure projects.
-    </p>
-
-    <p>
-        Our approach is simple — provide quality products,
-        dependable service and build long-term relationships
-        with contractors, builders and project partners.
-    </p>
-
-    <p>
-        From basic construction materials to ready-mix concrete
-        and construction chemicals, we aim to provide solutions
-        that help projects move forward with confidence.
-    </p>
-
-</div>
-
-
-<div class="about-boxes">
-
-    <div class="about-box">
-        <h4>Quality First</h4>
-        <p>
-            Materials selected with a focus on consistency,
-            reliability and construction performance.
-        </p>
-    </div>
-
-    <div class="about-box">
-        <h4>Dependable Supply</h4>
-        <p>
-            Supporting projects with timely and dependable
-            material availability.
-        </p>
-    </div>
-
-    <div class="about-box">
-        <h4>Professional Service</h4>
-        <p>
-            Clear communication and practical support for
-            every project requirement.
-        </p>
-    </div>
-
-    <div class="about-box">
-        <h4>Long-Term Trust</h4>
-        <p>
-            Building lasting partnerships through reliability
-            and consistent service.
-        </p>
-    </div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ================= MATERIALS ================= -->
-
-<section class="materials" id="materials">
-
-<div class="section-container">
-
-<div class="section-heading">
-
-    <div class="small-title">
-        Our Materials
-    </div>
-
-    <h2>Construction Materials</h2>
-
-    <p>
-        A range of essential construction materials and
-        solutions for different project requirements.
-    </p>
-
-</div>
-
-
-<div class="material-grid">
-
-
-<div class="material-card">
-
-    <div class="material-number">01</div>
-
-    <h3>Cement</h3>
-
-    <p>
-        A fundamental binding material used in concrete,
-        mortar and structural construction. Quality cement
-        helps provide strength, durability and long-term
-        performance.
-    </p>
-
-</div>
-
-
-<div class="material-card">
-
-    <div class="material-number">02</div>
-
-    <h3>Coarse Sand</h3>
-
-    <p>
-        Coarse sand is commonly used in concrete and
-        construction applications where proper grading and
-        particle size contribute to strength and workability.
-    </p>
-
-</div>
-
-
-<div class="material-card">
-
-    <div class="material-number">03</div>
-
-    <h3>10 mm Aggregate</h3>
-
-    <p>
-        10 mm aggregates are used in concrete mixes and
-        other applications where smaller-sized aggregate
-        is required for suitable workability and finish.
-    </p>
-
-</div>
-
-
-<div class="material-card">
-
-    <div class="material-number">04</div>
-
-    <h3>20 mm Aggregate</h3>
-
-    <p>
-        20 mm coarse aggregate is widely used in structural
-        concrete and helps provide the required strength,
-        stability and load-bearing characteristics.
-    </p>
-
-</div>
-
-
-<div class="material-card">
-
-    <div class="material-number">05</div>
-
-    <h3>Fine Sand</h3>
-
-    <p>
-        Fine sand is used in mortar, plastering and selected
-        concrete applications, contributing to smoothness,
-        finish and workability.
-    </p>
-
-</div>
-
-
-<div class="material-card">
-
-    <div class="material-number">06</div>
-
-    <h3>Fly Ash</h3>
-
-    <p>
-        Fly ash can be used as a supplementary cementitious
-        material in concrete. It can improve workability
-        and contribute to durable and sustainable mixes.
-    </p>
-
-</div>
-
-
-<div class="material-card">
-
-    <div class="material-number">07</div>
-
-    <h3>Admixture</h3>
-
-    <p>
-        Concrete admixtures are added to modify properties
-        such as workability, setting time, water demand and
-        overall concrete performance.
-    </p>
-
-</div>
-
-
-<div class="material-card">
-
-    <div class="material-number">08</div>
-
-    <h3>Construction Chemicals</h3>
-
-    <p>
-        Construction chemicals support specialised
-        requirements including waterproofing, bonding,
-        repair, protection and concrete performance.
-    </p>
-
-</div>
-
-
-<div class="material-card">
-
-    <div class="material-number">09</div>
-
-    <h3>RMC</h3>
-
-    <p>
-        Ready Mix Concrete is professionally batched and
-        mixed to provide consistent concrete quality,
-        efficient placement and dependable project supply.
-    </p>
-
-</div>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ================= RMC ================= -->
-
-<section class="rmc" id="rmc">
-
-<div class="section-container">
-
-<div class="section-heading">
-
-    <div class="small-title">
-        Ready Mix Concrete
-    </div>
-
-    <h2>RMC Solutions</h2>
-
-    <p>
-        Consistent concrete solutions for projects that demand
-        dependable quality and efficient supply.
-    </p>
-
-</div>
-
-
-<div class="rmc-box">
-
-<div>
-
-    <h2>
-        Concrete Built<br>
-        For Your Project.
-    </h2>
-
-    <p>
-        Our Ready Mix Concrete solutions are designed to provide
-        consistent batching, controlled mixing and reliable
-        concrete supply for construction requirements.
-    </p>
-
-    <div class="locations">
-
-        <div class="location">Amritsar</div>
-
-        <div class="location">Pathankot</div>
-
-        <div class="location">Kathua</div>
-
-        <div class="location">Ludhiana</div>
-
-        <div class="location">Jammu</div>
-
-    </div>
-
-</div>
-
-
-<div class="rmc-highlight">
-
-    <h3>RMC</h3>
-
-    <p>
-        Reliable Ready Mix Concrete solutions
-        for modern construction.
-    </p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ================= WHY US ================= -->
-
-<section class="why" id="why">
-
-<div class="section-container">
-
-<div class="section-heading">
-
-    <div class="small-title">
-        Why Onkar Buildwell
-    </div>
-
-    <h2>Built On Trust</h2>
-
-</div>
-
-
-<div class="why-grid">
-
-
-<div class="why-card">
-
-    <div class="icon">✓</div>
-
-    <h3>Quality</h3>
-
-    <p>
-        We focus on dependable construction materials
-        and consistent product quality.
-    </p>
-
-</div>
-
-
-<div class="why-card">
-
-    <div class="icon">◆</div>
-
-    <h3>Reliability</h3>
-
-    <p>
-        Reliable supply and professional service
-        for construction requirements.
-    </p>
-
-</div>
-
-
-<div class="why-card">
-
-    <div class="icon">↗</div>
-
-    <h3>Growth</h3>
-
-    <p>
-        Supporting builders and projects with solutions
-        designed for long-term performance.
-    </p>
-
-</div>
-
-
-<div class="why-card">
-
-    <div class="icon">●</div>
-
-    <h3>Relationships</h3>
-
-    <p>
-        We believe strong business relationships are
-        the foundation of lasting success.
-    </p>
-
-</div>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ================= CONTACT ================= -->
-
-<section class="contact" id="contact">
-
-<div class="section-container">
-
-<div class="section-heading">
-
-    <div class="small-title">
-        Get In Touch
-    </div>
-
-    <h2>Contact Onkar Buildwell</h2>
-
-    <p>
-        Have a material requirement or project enquiry?
-        Get in touch with our team.
-    </p>
-
-</div>
-
-
-<div class="contact-grid">
-
-
-<div class="contact-card">
-
-    <h3>Contact Details</h3>
-
-
-    <div class="contact-item">
-
-        <span>Email</span>
-
-        <strong>
-            <a href="mailto:onkarbuildwell1@gmail.com">
-                onkarbuildwell1@gmail.com
+            <a href="#home" class="logo-box">
+                <img src="./OB.png" alt="Onkar Buildwell Logo">
             </a>
-        </strong>
 
-    </div>
+            <nav class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About Us</a>
+                <a href="#materials">Materials</a>
+                <a href="#rmc">RMC</a>
+                <a href="#why-us">Why Us</a>
+                <a href="#contact">Contact</a>
+            </nav>
 
+        </div>
 
-    <div class="contact-item">
-
-        <span>Phone</span>
-
-        <strong>
-            <a href="tel:9542790001">
-                9542790001
-            </a>
-        </strong>
-
-        <br>
-
-        <strong>
-            <a href="tel:+917087813333">
-                +91 70878 13333
-            </a>
-        </strong>
-
-    </div>
+    </header>
 
 
-</div>
+    <!-- ================= HERO ================= -->
+
+    <main>
+
+        <section class="hero" id="home">
+
+            <div class="hero-container">
+
+                <div class="hero-content">
+
+                    <div class="eyebrow">
+                        Building Trust • Creating Spaces
+                    </div>
+
+                    <h1>
+                        Strong<br>
+                        Foundations.<br>
+                        <span>Better Futures.</span>
+                    </h1>
+
+                    <p class="hero-text">
+                        Onkar Buildwell provides dependable construction materials
+                        and concrete solutions designed to support stronger, safer
+                        and better-built spaces.
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a href="#materials" class="btn btn-primary">
+                            Explore Materials
+                        </a>
+
+                        <a href="#contact" class="btn btn-outline">
+                            Contact Us
+                        </a>
+
+                    </div>
+
+                </div>
 
 
-<div class="contact-card">
+                <!-- LOGO IMAGE -->
 
-    <h3>Our Team</h3>
+                <div class="hero-card">
 
+                    <div class="hero-logo-area">
 
-    <div class="contact-item">
+                        <img
+                            src="./OB.png"
+                            alt="Onkar Buildwell"
+                        >
 
-        <span>Contact Person</span>
+                    </div>
 
-        <strong>
-            Harmanpreet Singh
-        </strong>
+                </div>
 
-    </div>
+            </div>
 
-
-    <div class="contact-item">
-
-        <span>Contact Person</span>
-
-        <strong>
-            Jarnail Singh
-        </strong>
-
-    </div>
+        </section>
 
 
-    <div class="contact-item">
+        <!-- ================= ABOUT ================= -->
 
-        <span>Business</span>
+        <section id="about">
 
-        <strong>
-            Onkar Buildwell
-        </strong>
+            <div class="section-container">
 
-    </div>
+                <div class="section-heading">
 
+                    <small>About Onkar Buildwell</small>
 
-</div>
+                    <h2>Building With Purpose</h2>
 
+                    <p>
+                        Reliable materials. Consistent quality. Stronger construction.
+                    </p>
 
-</div>
-
-</div>
-
-</section>
+                </div>
 
 
-<!-- ================= FOOTER ================= -->
+                <div class="about-grid">
 
-<footer>
+                    <div class="about-content">
 
-    <img src="QB.png" alt="Onkar Buildwell">
+                        <h3>
+                            Quality materials for better-built spaces.
+                        </h3>
 
-    <p>
-        <strong>ONKAR BUILDWELL</strong>
-    </p>
+                        <p>
+                            Onkar Buildwell is focused on supplying dependable
+                            construction materials and concrete solutions for
+                            projects that demand strength, consistency and
+                            reliability.
+                        </p>
 
-    <p>
-        Building Trust <span class="gold">•</span> Creating Spaces
-    </p>
+                        <p>
+                            From essential construction materials to ready-mix
+                            concrete solutions, our approach is built around
+                            quality products, strong relationships and dependable
+                            service.
+                        </p>
 
-    <br>
+                        <p>
+                            We believe that every successful structure begins
+                            with the right materials and a commitment to doing
+                            things right.
+                        </p>
 
-    <p>
-        © 2026 Onkar Buildwell. All Rights Reserved.
-    </p>
+                    </div>
 
-</footer>
 
+                    <div class="about-boxes">
+
+                        <div class="about-box">
+                            <strong>Quality</strong>
+                            <span>Materials selected with reliability in mind.</span>
+                        </div>
+
+                        <div class="about-box">
+                            <strong>Consistency</strong>
+                            <span>Dependable products for demanding projects.</span>
+                        </div>
+
+                        <div class="about-box">
+                            <strong>Trust</strong>
+                            <span>Long-term relationships with customers and partners.</span>
+                        </div>
+
+                        <div class="about-box">
+                            <strong>Growth</strong>
+                            <span>Solutions designed for better construction.</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= MATERIALS ================= -->
+
+        <section id="materials">
+
+            <div class="section-container">
+
+                <div class="section-heading">
+
+                    <small>Our Materials</small>
+
+                    <h2>Construction Materials</h2>
+
+                    <p>
+                        A dependable range of essential materials and construction
+                        solutions for modern projects.
+                    </p>
+
+                </div>
+
+
+                <div class="materials-grid">
+
+
+                    <div class="material-card">
+
+                        <div class="material-number">01</div>
+
+                        <h3>Cement</h3>
+
+                        <p>
+                            A fundamental binding material used for concrete,
+                            mortar and structural applications. Quality cement
+                            contributes to strength, durability and long-term
+                            performance.
+                        </p>
+
+                    </div>
+
+
+                    <div class="material-card">
+
+                        <div class="material-number">02</div>
+
+                        <h3>Coarse Sand</h3>
+
+                        <p>
+                            Coarse sand is used in concrete and construction mixes
+                            to provide proper particle structure and support
+                            strength and workability.
+                        </p>
+
+                    </div>
+
+
+                    <div class="material-card">
+
+                        <div class="material-number">03</div>
+
+                        <h3>10 mm Aggregate</h3>
+
+                        <p>
+                            10 mm aggregates are commonly used in concrete and
+                            reinforced concrete applications where controlled
+                            aggregate size is required.
+                        </p>
+
+                    </div>
+
+
+                    <div class="material-card">
+
+                        <div class="material-number">04</div>
+
+                        <h3>20 mm Aggregate</h3>
+
+                        <p>
+                            20 mm aggregates are widely used in structural
+                            concrete, helping provide bulk, strength and
+                            stability within concrete mixes.
+                        </p>
+
+                    </div>
+
+
+                    <div class="material-card">
+
+                        <div class="material-number">05</div>
+
+                        <h3>Fine Sand</h3>
+
+                        <p>
+                            Fine sand is used in mortar, plastering and selected
+                            concrete applications, helping achieve smooth
+                            texture and proper mix consistency.
+                        </p>
+
+                    </div>
+
+
+                    <div class="material-card">
+
+                        <div class="material-number">06</div>
+
+                        <h3>Fly Ash</h3>
+
+                        <p>
+                            Fly ash can be incorporated into cementitious systems
+                            to improve workability and contribute to durable,
+                            resource-efficient concrete solutions.
+                        </p>
+
+                    </div>
+
+
+                    <div class="material-card">
+
+                        <div class="material-number">07</div>
+
+                        <h3>Admixture</h3>
+
+                        <p>
+                            Concrete admixtures are added to modify specific
+                            properties such as workability, setting behaviour,
+                            water demand and performance.
+                        </p>
+
+                    </div>
+
+
+                    <div class="material-card">
+
+                        <div class="material-number">08</div>
+
+                        <h3>Construction Chemicals</h3>
+
+                        <p>
+                            Construction chemicals support specialized building
+                            requirements including bonding, waterproofing,
+                            protection and concrete performance.
+                        </p>
+
+                    </div>
+
+
+                    <div class="material-card">
+
+                        <div class="material-number">09</div>
+
+                        <h3>RMC</h3>
+
+                        <p>
+                            Ready-Mix Concrete is professionally proportioned and
+                            mixed concrete supplied for efficient, consistent and
+                            reliable construction applications.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= RMC ================= -->
+
+        <section id="rmc">
+
+            <div class="section-container">
+
+                <div class="rmc-grid">
+
+                    <div class="rmc-content">
+
+                        <small>READY-MIX CONCRETE</small>
+
+                        <h2>
+                            Consistent Concrete.<br>
+                            Reliable Results.
+                        </h2>
+
+                        <p>
+                            Our RMC solutions are designed to make concrete
+                            construction more efficient and consistent, helping
+                            projects achieve dependable quality while reducing
+                            the complexity of on-site mixing.
+                        </p>
+
+                        <ul class="rmc-list">
+
+                            <li>Consistent mix proportions</li>
+
+                            <li>Efficient project execution</li>
+
+                            <li>Reliable concrete quality</li>
+
+                            <li>Suitable for diverse construction requirements</li>
+
+                        </ul>
+
+                    </div>
+
+
+                    <div class="rmc-card">
+
+                        <h3>RMC Solutions</h3>
+
+                        <p>
+                            Ready-mix concrete provides a practical solution for
+                            projects where consistency, efficiency and dependable
+                            concrete performance are important.
+                        </p>
+
+                        <div class="location">
+
+                            <strong>Serving construction needs with dependable
+                            material solutions.</strong>
+
+                            <br><br>
+
+                            Contact our team to discuss your concrete and
+                            construction material requirements.
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= WHY US ================= -->
+
+        <section id="why-us">
+
+            <div class="section-container">
+
+                <div class="section-heading">
+
+                    <small>Why Onkar Buildwell</small>
+
+                    <h2>Built Around Trust</h2>
+
+                    <p>
+                        Our approach is simple — provide dependable materials,
+                        maintain quality and build lasting relationships.
+                    </p>
+
+                </div>
+
+
+                <div class="why-grid">
+
+                    <div class="why-card">
+
+                        <div class="why-icon">✓</div>
+
+                        <h3>Quality</h3>
+
+                        <p>
+                            Focus on dependable construction materials and
+                            consistent solutions.
+                        </p>
+
+                    </div>
+
+
+                    <div class="why-card">
+
+                        <div class="why-icon">◆</div>
+
+                        <h3>Reliability</h3>
+
+                        <p>
+                            Materials and services designed around dependable
+                            project requirements.
+                        </p>
+
+                    </div>
+
+
+                    <div class="why-card">
+
+                        <div class="why-icon">↗</div>
+
+                        <h3>Efficiency</h3>
+
+                        <p>
+                            Practical solutions that help construction projects
+                            move forward efficiently.
+                        </p>
+
+                    </div>
+
+
+                    <div class="why-card">
+
+                        <div class="why-icon">∞</div>
+
+                        <h3>Relationships</h3>
+
+                        <p>
+                            We value strong, long-term relationships with our
+                            customers and partners.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CONTACT ================= -->
+
+        <section id="contact">
+
+            <div class="section-container">
+
+                <div class="contact-grid">
+
+                    <div class="contact-info">
+
+                        <small class="eyebrow">
+                            Get In Touch
+                        </small>
+
+                        <h2>
+                            Let's Build<br>
+                            Something Strong.
+                        </h2>
+
+                        <p>
+                            Have a construction material or RMC requirement?
+                            Get in touch with the Onkar Buildwell team.
+                        </p>
+
+
+                        <div class="contact-item">
+
+                            <div class="contact-icon">✉</div>
+
+                            <div>
+
+                                <strong>Email</strong>
+
+                                <a href="mailto:onkarbuildwell1@gmail.com">
+                                    onkarbuildwell1@gmail.com
+                                </a>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="contact-item">
+
+                            <div class="contact-icon">☎</div>
+
+                            <div>
+
+                                <strong>Phone</strong>
+
+                                <a href="tel:+919542790001">
+                                    9542790001
+                                </a>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="contact-item">
+
+                            <div class="contact-icon">☎</div>
+
+                            <div>
+
+                                <strong>Harmanpreet Singh</strong>
+
+                                <a href="tel:+917087813333">
+                                    +91 70878 13333
+                                </a>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="contact-item">
+
+                            <div class="contact-icon">☎</div>
+
+                            <div>
+
+                                <strong>Jarnail Singh</strong>
+
+                                <a href="tel:+919542790001">
+                                    +91 95427 90001
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="contact-card">
+
+                        <h3>Talk To Our Team</h3>
+
+                        <p>
+                            For enquiries regarding cement, aggregates, sand,
+                            fly ash, admixtures, construction chemicals or RMC,
+                            contact us directly.
+                        </p>
+
+
+                        <div class="call-buttons">
+
+                            <a
+                                class="call-btn"
+                                href="mailto:onkarbuildwell1@gmail.com"
+                            >
+                                ✉ &nbsp; Email Onkar Buildwell
+                            </a>
+
+
+                            <a
+                                class="call-btn"
+                                href="tel:+919542790001"
+                            >
+                                ☎ &nbsp; Call 9542790001
+                            </a>
+
+
+                            <a
+                                class="call-btn"
+                                href="tel:+917087813333"
+                            >
+                                ☎ &nbsp; Call Harmanpreet Singh
+                            </a>
+
+
+                            <a
+                                class="call-btn"
+                                href="tel:+919542790001"
+                            >
+                                ☎ &nbsp; Call Jarnail Singh
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-container">
+
+            <div class="footer-logo">
+
+                <img
+                    src="./OB.png"
+                    alt="Onkar Buildwell Logo"
+                >
+
+                <div>
+
+                    <strong>ONKAR BUILDWELL</strong>
+
+                    <span>
+                        BUILDING TRUST • CREATING SPACES
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="copyright">
+
+                © <span id="year"></span> Onkar Buildwell.
+                All rights reserved.
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script>
+
+        // Automatically update copyright year
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+
+
+        // Smooth navigation
+        document.querySelectorAll(".nav-links a").forEach(function(link) {
+
+            link.addEventListener("click", function() {
+
+                document.querySelectorAll(".nav-links a")
+                    .forEach(function(item) {
+                        item.style.background = "";
+                        item.style.color = "";
+                    });
+
+            });
+
+        });
+
+    </script>
 
 </body>
 </html>
