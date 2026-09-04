@@ -17,9 +17,10 @@
     rel="stylesheet">
 
   <style>
+
     /* =========================================================
        ONKAR BUILDWELL
-       Complete Website
+       COMPLETE WEBSITE
        ========================================================= */
 
     :root {
@@ -134,13 +135,6 @@
       transform: translateY(-2px);
     }
 
-    .menu-toggle {
-      display: none;
-      border: 0;
-      background: transparent;
-      cursor: pointer;
-    }
-
     /* =========================================================
        FULL WIDTH SLIDESHOW
        ========================================================= */
@@ -186,11 +180,6 @@
       object-position: center;
     }
 
-    /*
-      Dark gradient keeps the images professional
-      and makes the text at the bottom readable.
-    */
-
     .slide::after {
       content: "";
       position: absolute;
@@ -232,7 +221,9 @@
       color: rgba(255, 255, 255, 0.9);
     }
 
-    /* slideshow arrows */
+    /* =========================================================
+       SLIDESHOW ARROWS
+       ========================================================= */
 
     .slide-arrow {
       position: absolute;
@@ -271,7 +262,9 @@
       right: 25px;
     }
 
-    /* dots */
+    /* =========================================================
+       SLIDESHOW DOTS
+       ========================================================= */
 
     .slide-dots {
       position: absolute;
@@ -553,7 +546,7 @@
     }
 
     /* =========================================================
-       PROCESS
+       PROCESS / RMC
        ========================================================= */
 
     .process {
@@ -717,6 +710,202 @@
     }
 
     /* =========================================================
+       CUSTOMER ENQUIRY
+       ========================================================= */
+
+    .enquiry {
+      background: var(--white);
+    }
+
+    .enquiry-panel {
+      background: var(--navy);
+      color: white;
+
+      border-radius: 25px;
+      padding: 65px;
+
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 70px;
+
+      position: relative;
+      overflow: hidden;
+
+      box-shadow: var(--shadow);
+    }
+
+    .enquiry-panel::before {
+      content: "";
+      position: absolute;
+
+      width: 430px;
+      height: 430px;
+
+      border: 1px solid rgba(201, 146, 37, 0.25);
+      border-radius: 50%;
+
+      right: -200px;
+      bottom: -230px;
+    }
+
+    .enquiry-copy {
+      position: relative;
+      z-index: 2;
+    }
+
+    .enquiry-copy .eyebrow {
+      color: var(--gold-light);
+    }
+
+    .enquiry-copy h2 {
+      color: white;
+      font-size: clamp(48px, 5vw, 68px);
+    }
+
+    .enquiry-copy h2 em {
+      color: var(--gold-light);
+    }
+
+    .enquiry-copy p {
+      color: rgba(255, 255, 255, 0.72);
+      max-width: 440px;
+      margin-top: 25px;
+      font-size: 15px;
+    }
+
+    .enquiry-points {
+      margin-top: 35px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .enquiry-point {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+
+      color: rgba(255, 255, 255, 0.82);
+      font-size: 13px;
+    }
+
+    .enquiry-point span {
+      width: 28px;
+      height: 28px;
+
+      border: 1px solid var(--gold);
+      border-radius: 50%;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      color: var(--gold);
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+
+    .enquiry-form {
+      position: relative;
+      z-index: 2;
+
+      background: white;
+      color: var(--navy);
+
+      border-radius: 20px;
+      padding: 35px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--navy);
+      margin-bottom: 7px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+
+      border: 1px solid var(--border);
+      border-radius: 10px;
+
+      padding: 13px 14px;
+
+      font-family: "Manrope", sans-serif;
+      font-size: 14px;
+      color: var(--navy);
+
+      background: #fff;
+
+      outline: none;
+
+      transition: border-color 0.25s ease,
+                  box-shadow 0.25s ease;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px rgba(201, 146, 37, 0.10);
+    }
+
+    .form-group textarea {
+      min-height: 125px;
+      resize: vertical;
+    }
+
+    .submit-btn {
+      width: 100%;
+
+      border: 0;
+      border-radius: 10px;
+
+      padding: 15px;
+
+      background: var(--gold);
+      color: white;
+
+      font-family: "Manrope", sans-serif;
+      font-size: 14px;
+      font-weight: 800;
+
+      cursor: pointer;
+
+      transition:
+        background 0.25s ease,
+        transform 0.25s ease;
+    }
+
+    .submit-btn:hover {
+      background: #b7811d;
+      transform: translateY(-2px);
+    }
+
+    .form-note {
+      margin-top: 12px;
+      color: #6d7d8b;
+      font-size: 10px;
+      line-height: 1.5;
+      text-align: center;
+    }
+
+    /* =========================================================
        FOOTER
        ========================================================= */
 
@@ -810,12 +999,17 @@
 
       .about-grid,
       .process-banner,
-      .contact-panel {
+      .contact-panel,
+      .enquiry-panel {
         grid-template-columns: 1fr;
       }
 
       .material-grid {
         grid-template-columns: repeat(2, 1fr);
+      }
+
+      .enquiry-panel {
+        gap: 40px;
       }
     }
 
@@ -853,8 +1047,7 @@
       }
 
       /*
-        IMPORTANT:
-        Keep all navigation buttons in ONE LINE.
+        KEEP ALL NAVIGATION BUTTONS IN ONE LINE
       */
 
       .nav-links {
@@ -975,6 +1168,26 @@
         gap: 40px;
       }
 
+      /* CUSTOMER ENQUIRY MOBILE */
+
+      .enquiry-panel {
+        padding: 35px 20px;
+        gap: 35px;
+      }
+
+      .enquiry-form {
+        padding: 25px 18px;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+
+      .enquiry-copy h2 {
+        font-size: 46px;
+      }
+
       footer {
         flex-direction: column;
         text-align: center;
@@ -984,12 +1197,15 @@
         flex-direction: column;
       }
     }
+
   </style>
 </head>
+
 
 <body>
 
   <div class="top-line"></div>
+
 
   <!-- =======================================================
        HEADER
@@ -999,33 +1215,47 @@
 
     <nav class="navbar">
 
-      <a class="brand" href="#home" aria-label="Onkar Buildwell home">
-        <img src="OB.png" alt="Onkar Buildwell Logo">
+      <a class="brand"
+         href="#home"
+         aria-label="Onkar Buildwell home">
+
+        <img
+          src="OB.png"
+          alt="Onkar Buildwell Logo"
+        >
+
       </a>
+
 
       <div class="nav-links">
 
-        <a href="#home" class="nav-link active">
+        <a href="#home"
+           class="nav-link active">
           Home
         </a>
 
-        <a href="#about" class="nav-link">
+        <a href="#about"
+           class="nav-link">
           About Us
         </a>
 
-        <a href="#materials" class="nav-link">
+        <a href="#materials"
+           class="nav-link">
           Materials
         </a>
 
-        <a href="#rmc" class="nav-link">
+        <a href="#rmc"
+           class="nav-link">
           RMC
         </a>
 
-        <a href="#why-us" class="nav-link">
+        <a href="#why-us"
+           class="nav-link">
           Why Us
         </a>
 
-        <a href="#contact" class="nav-link">
+        <a href="#contact"
+           class="nav-link">
           Contact
         </a>
 
@@ -1038,6 +1268,7 @@
 
   <main>
 
+
     <!-- =====================================================
          FULL WIDTH SLIDESHOW
          Uses:
@@ -1046,9 +1277,11 @@
          3.png
          ===================================================== -->
 
-    <section class="slideshow-section" id="home-slideshow">
+    <section class="slideshow-section"
+             id="home-slideshow">
 
       <div class="slideshow">
+
 
         <!-- IMAGE 1 -->
 
@@ -1144,9 +1377,10 @@
 
         <button
           class="slide-arrow slide-prev"
-          aria-label="Previous image"
-        >
+          aria-label="Previous image">
+
           ‹
+
         </button>
 
 
@@ -1154,9 +1388,10 @@
 
         <button
           class="slide-arrow slide-next"
-          aria-label="Next image"
-        >
+          aria-label="Next image">
+
           ›
+
         </button>
 
 
@@ -1167,20 +1402,20 @@
           <button
             class="slide-dot active"
             data-slide="0"
-            aria-label="Slide 1"
-          ></button>
+            aria-label="Slide 1">
+          </button>
 
           <button
             class="slide-dot"
             data-slide="1"
-            aria-label="Slide 2"
-          ></button>
+            aria-label="Slide 2">
+          </button>
 
           <button
             class="slide-dot"
             data-slide="2"
-            aria-label="Slide 3"
-          ></button>
+            aria-label="Slide 3">
+          </button>
 
         </div>
 
@@ -1193,7 +1428,8 @@
          ABOUT
          ===================================================== -->
 
-    <section class="section about" id="about">
+    <section class="section about"
+             id="about">
 
       <div class="section-heading reveal">
 
@@ -1211,12 +1447,13 @@
 
       <div class="about-grid">
 
+
         <div class="about-intro reveal">
 
           <p class="lead">
-            Onkar Buildwell is a construction-focused company committed to
-            supporting dependable building work through quality materials,
-            practical solutions and responsive relationships.
+            Onkar Buildwell is a construction-focused company committed
+            to supporting dependable building work through quality
+            materials, practical solutions and responsive relationships.
           </p>
 
           <p>
@@ -1237,17 +1474,22 @@
 
         <div class="about-values reveal delay-1">
 
+
           <div class="value">
 
             <span>01</span>
 
             <div>
-              <h3>Quality First</h3>
+
+              <h3>
+                Quality First
+              </h3>
 
               <p>
                 Material-focused thinking for dependable
                 construction outcomes.
               </p>
+
             </div>
 
           </div>
@@ -1258,12 +1500,16 @@
             <span>02</span>
 
             <div>
-              <h3>Strong Relationships</h3>
+
+              <h3>
+                Strong Relationships
+              </h3>
 
               <p>
                 Clear communication and long-term professional
                 partnerships.
               </p>
+
             </div>
 
           </div>
@@ -1274,12 +1520,16 @@
             <span>03</span>
 
             <div>
-              <h3>Sustainable Growth</h3>
+
+              <h3>
+                Sustainable Growth
+              </h3>
 
               <p>
                 Smarter material choices and responsible
                 project practices.
               </p>
+
             </div>
 
           </div>
@@ -1290,15 +1540,20 @@
             <span>04</span>
 
             <div>
-              <h3>Better Communities</h3>
+
+              <h3>
+                Better Communities
+              </h3>
 
               <p>
                 Supporting spaces that are useful, durable
                 and built to last.
               </p>
+
             </div>
 
           </div>
+
 
         </div>
 
@@ -1311,7 +1566,8 @@
          MATERIALS
          ===================================================== -->
 
-    <section class="section materials" id="materials">
+    <section class="section materials"
+             id="materials">
 
       <div class="section-heading centered reveal">
 
@@ -1336,7 +1592,9 @@
 
         <article class="material-card reveal">
 
-          <span class="material-no">01</span>
+          <span class="material-no">
+            01
+          </span>
 
           <div class="material-icon">
             C
@@ -1361,7 +1619,9 @@
 
         <article class="material-card reveal delay-1">
 
-          <span class="material-no">02</span>
+          <span class="material-no">
+            02
+          </span>
 
           <div class="material-icon">
             CS
@@ -1386,7 +1646,9 @@
 
         <article class="material-card reveal delay-2">
 
-          <span class="material-no">03</span>
+          <span class="material-no">
+            03
+          </span>
 
           <div class="material-icon">
             10
@@ -1411,7 +1673,9 @@
 
         <article class="material-card reveal">
 
-          <span class="material-no">04</span>
+          <span class="material-no">
+            04
+          </span>
 
           <div class="material-icon">
             20
@@ -1436,7 +1700,9 @@
 
         <article class="material-card reveal delay-1">
 
-          <span class="material-no">05</span>
+          <span class="material-no">
+            05
+          </span>
 
           <div class="material-icon">
             FS
@@ -1461,7 +1727,9 @@
 
         <article class="material-card reveal delay-2">
 
-          <span class="material-no">06</span>
+          <span class="material-no">
+            06
+          </span>
 
           <div class="material-icon">
             FA
@@ -1486,7 +1754,9 @@
 
         <article class="material-card reveal">
 
-          <span class="material-no">07</span>
+          <span class="material-no">
+            07
+          </span>
 
           <div class="material-icon">
             AD
@@ -1511,7 +1781,9 @@
 
         <article class="material-card reveal delay-1">
 
-          <span class="material-no">08</span>
+          <span class="material-no">
+            08
+          </span>
 
           <div class="material-icon">
             CH
@@ -1536,7 +1808,9 @@
 
         <article class="material-card featured reveal delay-2">
 
-          <span class="material-no">09</span>
+          <span class="material-no">
+            09
+          </span>
 
           <div class="material-icon">
             RMC
@@ -1559,6 +1833,7 @@
 
         </article>
 
+
       </div>
 
     </section>
@@ -1568,9 +1843,11 @@
          RMC
          ===================================================== -->
 
-    <section class="section process" id="rmc">
+    <section class="section process"
+             id="rmc">
 
       <div class="process-banner reveal">
+
 
         <div>
 
@@ -1589,29 +1866,74 @@
 
         <div class="process-steps">
 
-          <div>
-            <span>01</span>
-            <strong>Understand</strong>
-            <small>Project needs</small>
-          </div>
 
           <div>
-            <span>02</span>
-            <strong>Select</strong>
-            <small>Suitable materials</small>
+
+            <span>
+              01
+            </span>
+
+            <strong>
+              Understand
+            </strong>
+
+            <small>
+              Project needs
+            </small>
+
           </div>
 
-          <div>
-            <span>03</span>
-            <strong>Supply</strong>
-            <small>Practical solutions</small>
-          </div>
 
           <div>
-            <span>04</span>
-            <strong>Build</strong>
-            <small>Better outcomes</small>
+
+            <span>
+              02
+            </span>
+
+            <strong>
+              Select
+            </strong>
+
+            <small>
+              Suitable materials
+            </small>
+
           </div>
+
+
+          <div>
+
+            <span>
+              03
+            </span>
+
+            <strong>
+              Supply
+            </strong>
+
+            <small>
+              Practical solutions
+            </small>
+
+          </div>
+
+
+          <div>
+
+            <span>
+              04
+            </span>
+
+            <strong>
+              Build
+            </strong>
+
+            <small>
+              Better outcomes
+            </small>
+
+          </div>
+
 
         </div>
 
@@ -1624,7 +1946,8 @@
          WHY US
          ===================================================== -->
 
-    <section class="section about" id="why-us">
+    <section class="section about"
+             id="why-us">
 
       <div class="section-heading centered reveal">
 
@@ -1641,6 +1964,7 @@
 
 
       <div class="about-grid">
+
 
         <div class="about-intro reveal">
 
@@ -1662,17 +1986,24 @@
 
         <div class="about-values reveal delay-1">
 
+
           <div class="value">
 
-            <span>01</span>
+            <span>
+              01
+            </span>
 
             <div>
-              <h3>Dependable Supply</h3>
+
+              <h3>
+                Dependable Supply
+              </h3>
 
               <p>
                 Construction materials and concrete solutions
                 focused on project requirements.
               </p>
+
             </div>
 
           </div>
@@ -1680,15 +2011,21 @@
 
           <div class="value">
 
-            <span>02</span>
+            <span>
+              02
+            </span>
 
             <div>
-              <h3>Quality Focus</h3>
+
+              <h3>
+                Quality Focus
+              </h3>
 
               <p>
                 A consistent approach toward materials,
                 concrete and construction support.
               </p>
+
             </div>
 
           </div>
@@ -1696,15 +2033,21 @@
 
           <div class="value">
 
-            <span>03</span>
+            <span>
+              03
+            </span>
 
             <div>
-              <h3>Professional Service</h3>
+
+              <h3>
+                Professional Service
+              </h3>
 
               <p>
                 Clear communication and responsive interaction
                 with customers and project teams.
               </p>
+
             </div>
 
           </div>
@@ -1712,18 +2055,25 @@
 
           <div class="value">
 
-            <span>04</span>
+            <span>
+              04
+            </span>
 
             <div>
-              <h3>Long-Term Vision</h3>
+
+              <h3>
+                Long-Term Vision
+              </h3>
 
               <p>
                 Creating stronger spaces and lasting professional
                 relationships.
               </p>
+
             </div>
 
           </div>
+
 
         </div>
 
@@ -1736,9 +2086,11 @@
          CONTACT
          ===================================================== -->
 
-    <section class="section contact" id="contact">
+    <section class="section contact"
+             id="contact">
 
       <div class="contact-panel reveal">
+
 
         <div class="contact-copy">
 
@@ -1766,8 +2118,7 @@
 
           <a
             class="contact-item"
-            href="mailto:onkarbuildwell1@gmail.com"
-          >
+            href="mailto:onkarbuildwell1@gmail.com">
 
             <span class="contact-label">
               EMAIL
@@ -1788,8 +2139,7 @@
 
           <a
             class="contact-item"
-            href="tel:+917087813333"
-          >
+            href="tel:+917087813333">
 
             <span class="contact-label">
               JARNAIL SINGH
@@ -1810,8 +2160,7 @@
 
           <a
             class="contact-item"
-            href="tel:+919542790001"
-          >
+            href="tel:+919542790001">
 
             <span class="contact-label">
               HARMANPREET SINGH
@@ -1834,6 +2183,289 @@
 
     </section>
 
+
+    <!-- =====================================================
+         CUSTOMER ENQUIRY
+         ===================================================== -->
+
+    <section class="section enquiry"
+             id="enquiry">
+
+      <div class="enquiry-panel reveal">
+
+
+        <!-- LEFT SIDE -->
+
+        <div class="enquiry-copy">
+
+          <p class="eyebrow">
+            04 — CUSTOMER ENQUIRY
+          </p>
+
+          <h2>
+            Tell us about<br>
+            your <em>requirement.</em>
+          </h2>
+
+          <p>
+            Looking for construction materials, RMC or concrete
+            solutions? Share your requirement with us and our team
+            can get back to you.
+          </p>
+
+
+          <div class="enquiry-points">
+
+
+            <div class="enquiry-point">
+
+              <span>
+                01
+              </span>
+
+              <p>
+                Tell us what material or service you need.
+              </p>
+
+            </div>
+
+
+            <div class="enquiry-point">
+
+              <span>
+                02
+              </span>
+
+              <p>
+                Provide your project and contact details.
+              </p>
+
+            </div>
+
+
+            <div class="enquiry-point">
+
+              <span>
+                03
+              </span>
+
+              <p>
+                Our team can contact you regarding your enquiry.
+              </p>
+
+            </div>
+
+
+          </div>
+
+        </div>
+
+
+        <!-- RIGHT SIDE — FORM -->
+
+        <form
+          class="enquiry-form"
+          action="https://formsubmit.co/onkarbuildwell1@gmail.com"
+          method="POST">
+
+
+          <!-- FORM SETTINGS -->
+
+          <input
+            type="hidden"
+            name="_subject"
+            value="New Customer Enquiry - Onkar Buildwell">
+
+          <input
+            type="hidden"
+            name="_captcha"
+            value="false">
+
+          <input
+            type="hidden"
+            name="_template"
+            value="table">
+
+          <input
+            type="hidden"
+            name="_next"
+            value="https://jashmeethdaliwal-eng.github.io/Onkar.buildwell/#enquiry">
+
+
+          <!-- NAME + COMPANY -->
+
+          <div class="form-row">
+
+
+            <div class="form-group">
+
+              <label for="name">
+                Customer Name *
+              </label>
+
+              <input
+                type="text"
+                id="name"
+                name="Customer Name"
+                placeholder="Enter your name"
+                required>
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label for="company">
+                Company Name
+              </label>
+
+              <input
+                type="text"
+                id="company"
+                name="Company Name"
+                placeholder="Company name">
+
+            </div>
+
+
+          </div>
+
+
+          <!-- PHONE + EMAIL -->
+
+          <div class="form-row">
+
+
+            <div class="form-group">
+
+              <label for="phone">
+                Phone Number *
+              </label>
+
+              <input
+                type="tel"
+                id="phone"
+                name="Phone Number"
+                placeholder="+91 XXXXX XXXXX"
+                required>
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label for="email">
+                Email *
+              </label>
+
+              <input
+                type="email"
+                id="email"
+                name="Customer Email"
+                placeholder="your@email.com"
+                required>
+
+            </div>
+
+
+          </div>
+
+
+          <!-- ENQUIRY TYPE -->
+
+          <div class="form-group">
+
+            <label for="requirement">
+              Requirement *
+            </label>
+
+            <select
+              id="requirement"
+              name="Requirement"
+              required>
+
+              <option value="">
+                Select your requirement
+              </option>
+
+              <option value="RMC">
+                Ready Mix Concrete (RMC)
+              </option>
+
+              <option value="Cement">
+                Cement
+              </option>
+
+              <option value="Aggregates">
+                Aggregates
+              </option>
+
+              <option value="Sand">
+                Sand
+              </option>
+
+              <option value="Fly Ash">
+                Fly Ash
+              </option>
+
+              <option value="Admixture">
+                Admixture
+              </option>
+
+              <option value="Construction Chemicals">
+                Construction Chemicals
+              </option>
+
+              <option value="Other">
+                Other Requirement
+              </option>
+
+            </select>
+
+          </div>
+
+
+          <!-- MESSAGE -->
+
+          <div class="form-group">
+
+            <label for="message">
+              Your Enquiry *
+            </label>
+
+            <textarea
+              id="message"
+              name="Message"
+              placeholder="Tell us about your project, quantity, location or requirement..."
+              required></textarea>
+
+          </div>
+
+
+          <!-- SUBMIT -->
+
+          <button
+            type="submit"
+            class="submit-btn">
+
+            Send Enquiry →
+
+          </button>
+
+
+          <p class="form-note">
+            Your enquiry details will be sent to
+            onkarbuildwell1@gmail.com.
+          </p>
+
+
+        </form>
+
+      </div>
+
+    </section>
+
+
   </main>
 
 
@@ -1843,12 +2475,12 @@
 
   <footer>
 
+
     <div class="footer-brand">
 
       <img
         src="OB.png"
-        alt="Onkar Buildwell"
-      >
+        alt="Onkar Buildwell">
 
       <span>
         Building Trust • Creating Spaces
@@ -1856,10 +2488,12 @@
 
     </div>
 
+
     <p>
       © <span id="year"></span>
       Onkar Buildwell. All rights reserved.
     </p>
+
 
   </footer>
 
@@ -1869,6 +2503,7 @@
        ======================================================= -->
 
   <script>
+
 
     /* -------------------------------------------------------
        YEAR
@@ -2012,6 +2647,7 @@
     const navLinks =
       document.querySelectorAll(".nav-link");
 
+
     navLinks.forEach(link => {
 
       link.addEventListener(
@@ -2030,6 +2666,7 @@
       );
 
     });
+
 
   </script>
 
