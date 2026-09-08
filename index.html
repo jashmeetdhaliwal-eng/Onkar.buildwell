@@ -168,16 +168,115 @@ footer{background:#02131f;color:#fff;padding:53px 0 24px;text-align:center;borde
   .material-grid{grid-template-columns:1fr}.locations-grid{grid-template-columns:1fr}.locations-grid .location{min-height:285px}.location h3{margin-top:72px;font-size:38px}
   .process-visual{height:520px}.process-stage{width:155px}.stage1,.stage3,.stage5{left:15px}.stage2,.stage4{right:15px}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.form-box{padding:22px}.jobs .job{padding:25px}
 }
+
+/* ===== Added UX / conversion features ===== */
+header.scrolled .nav{height:62px}
+header.scrolled .logo img{width:43px;height:43px}
+header.scrolled{box-shadow:0 10px 35px rgba(3,26,42,.10)}
+.nav-links a.active:not(.nav-cta){color:var(--gold)}
+.nav-links a.active:not(.nav-cta):after{width:100%}
+
+.mobile-drawer-backdrop{display:none}
+.mobile-drawer-backdrop.open{display:block;position:fixed;inset:0;background:rgba(3,26,42,.42);z-index:998}
+.mobile-menu{position:relative;z-index:1002}
+@media(max-width:900px){
+  header{z-index:1000}
+  .nav-links{display:flex;position:fixed;top:0;right:0;left:auto;width:min(340px,88vw);height:100vh;background:var(--paper);padding:105px 28px 30px;flex-direction:column;align-items:stretch;gap:0;border:0;transform:translateX(105%);transition:transform .35s ease;box-shadow:-20px 0 60px rgba(3,26,42,.18);z-index:1001}
+  .nav-links.open{display:flex;transform:translateX(0)}
+  .nav-links a{font-size:11px;padding:16px 0;border-bottom:1px solid var(--line)}
+  .nav-links .nav-cta{margin-top:18px;text-align:center;border:0}
+}
+
+.hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:35px}
+.hero-stat{border:1px solid #ffffff18;background:#ffffff08;padding:17px 14px;min-width:0}
+.hero-stat strong{display:block;font:800 29px "Manrope";color:#fff;line-height:1}
+.hero-stat strong span{color:var(--gold2)}
+.hero-stat small{display:block;margin-top:8px;font-size:7px;letter-spacing:1.2px;color:#9db0bb;font-weight:900}
+@media(max-width:620px){.hero-stats{gap:7px}.hero-stat{padding:13px 9px}.hero-stat strong{font-size:23px}.hero-stat small{font-size:6px}}
+
+.whatsapp-float{position:fixed;right:22px;bottom:22px;width:55px;height:55px;border-radius:50%;display:grid;place-items:center;background:#25D366;color:#fff;font-size:25px;z-index:900;box-shadow:0 12px 35px rgba(0,0,0,.25);transition:.3s}
+.whatsapp-float:hover{transform:translateY(-5px) scale(1.05)}
+.whatsapp-float:after{content:"WhatsApp";position:absolute;right:66px;background:var(--navy);padding:7px 10px;font-size:7px;font-weight:900;letter-spacing:1px;white-space:nowrap;opacity:0;pointer-events:none;transition:.25s}
+.whatsapp-float:hover:after{opacity:1}
+
+.grade-wrap{overflow-x:auto;border:1px solid var(--line);background:#fff;box-shadow:var(--shadow)}
+.grade-table{width:100%;border-collapse:collapse;min-width:650px}
+.grade-table th,.grade-table td{padding:16px 18px;text-align:left;border-bottom:1px solid var(--line);font-size:11px}
+.grade-table th{background:var(--navy);color:#fff;font-size:8px;letter-spacing:1.4px;text-transform:uppercase}
+.grade-table tr:last-child td{border-bottom:0}
+.grade-table td:first-child{font:800 18px "Manrope";color:var(--gold)}
+.grade-table tr:hover td{background:#faf8f1}
+.grade-note{font-size:9px;color:var(--muted);margin-top:12px}
+
+.calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:start}
+.calculator{background:#fff;border:1px solid var(--line);padding:30px;box-shadow:var(--shadow)}
+.calc-fields{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.calc-result{margin-top:18px;padding:20px;background:var(--deep);color:#fff;display:flex;align-items:center;justify-content:space-between;gap:15px}
+.calc-result small{display:block;color:#9db0bb;font-size:7px;letter-spacing:1.4px;font-weight:900}
+.calc-result strong{font:800 30px "Manrope";color:var(--gold2)}
+.calc-actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:15px}
+.btn-outline{border:1px solid var(--navy);color:var(--navy);background:#fff;padding:13px 17px;font-size:8px;font-weight:900;letter-spacing:1px}
+.btn-outline:hover{background:var(--navy);color:#fff}
+@media(max-width:900px){.calc-grid{grid-template-columns:1fr}.calc-fields{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.calc-fields{grid-template-columns:1fr}.calculator{padding:21px}}
+
+.usp-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.usp{background:#fff;padding:27px 22px;min-height:180px}
+.usp-no{font-size:8px;color:var(--gold);font-weight:900;letter-spacing:2px}
+.usp h3{font:700 19px "Manrope";margin:22px 0 7px}
+.usp p{font-size:10px;color:var(--muted)}
+@media(max-width:900px){.usp-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.usp-grid{grid-template-columns:1fr}}
+
+.qa{display:grid;grid-template-columns:.85fr 1.15fr;gap:70px;align-items:center}
+.qa-card{background:#fff;border:1px solid var(--line);padding:31px}
+.qa-list{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin-top:20px}
+.qa-item{border-top:2px solid var(--gold);padding-top:13px}
+.qa-item strong{display:block;font:700 15px "Manrope"}
+.qa-item span{display:block;font-size:9px;color:var(--muted);margin-top:4px}
+.qa-badge{display:inline-flex;border:1px solid var(--line);padding:10px 13px;font-size:7px;font-weight:900;letter-spacing:1.4px;color:var(--gold);margin-top:15px}
+@media(max-width:900px){.qa{grid-template-columns:1fr}}
+
+.modal-backdrop{display:none;position:fixed;inset:0;background:rgba(3,26,42,.72);z-index:4000;padding:20px;overflow:auto}
+.modal-backdrop.open{display:grid;place-items:center}
+.modal{width:min(650px,100%);background:var(--paper);box-shadow:0 30px 100px #0008;position:relative}
+.modal-head{background:var(--navy);color:#fff;padding:25px 30px}
+.modal-head h3{font:700 25px "Manrope"}
+.modal-head p{font-size:9px;color:#b7c6ce;margin-top:5px}
+.modal-close{position:absolute;right:18px;top:15px;border:0;background:transparent;color:#fff;font-size:25px}
+.modal-body{padding:27px}
+.modal-body .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+@media(max-width:620px){.modal-body .form-grid{grid-template-columns:1fr}}
+
+.back-top{position:fixed;right:22px;bottom:88px;width:42px;height:42px;border:1px solid var(--gold);background:var(--navy);color:var(--gold2);display:grid;place-items:center;z-index:850;opacity:0;visibility:hidden;transform:translateY(10px);transition:.3s}
+.back-top.show{opacity:1;visibility:visible;transform:none}
+
 </style>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"LocalBusiness",
+  "name":"Onkar Buildwell",
+  "description":"Ready Mix Concrete and construction material solutions serving Amritsar and Batala, Punjab.",
+  "email":"onkarbuildwell1@gmail.com",
+  "telephone":"+91-70878-13333",
+  "areaServed":[{"@type":"City","name":"Amritsar"},{"@type":"City","name":"Batala"}],
+  "address":{"@type":"PostalAddress","addressRegion":"Punjab","addressCountry":"IN"},
+  "sameAs":["https://www.instagram.com/onkar.buildwell/"],
+  "url":window.location.href
+}
+</script>
 </head>
 <body>
 <div class="top-strip"></div>
 <header>
 <nav class="nav container">
 <a href="#home" class="logo"><img src="OB.png" alt="Onkar Buildwell"><div><div class="logo-name">ONKAR BUILDWELL</div><div class="logo-tag">BUILDING TRUST • CREATING SPACES</div></div></a>
-<button class="mobile-menu" id="menu" aria-label="Open menu">☰</button>
+<button class="mobile-menu" id="menu" aria-label="Open menu" aria-expanded="false">☰</button>
+<div class="mobile-drawer-backdrop" id="drawerBackdrop"></div>
 <div class="nav-links" id="navLinks">
-<a href="#home">HOME</a><a href="#about">ABOUT</a><a href="#materials">MATERIALS</a><a href="#rmc">RMC</a><a href="#locations">LOCATIONS</a><a href="#careers">CAREERS</a><a href="#enquiry" class="nav-cta">ENQUIRE</a>
+<a href="#home">HOME</a><a href="#about">ABOUT</a><a href="#materials">MATERIALS</a><a href="#rmc">RMC</a><a href="#grades">GRADES</a><a href="#calculator">CALCULATOR</a><a href="#quality">QUALITY</a><a href="#locations">LOCATIONS</a><a href="#careers">CAREERS</a><a href="#enquiry" class="nav-cta">ENQUIRE</a>
 </div>
 </nav>
 </header>
@@ -190,7 +289,12 @@ footer{background:#02131f;color:#fff;padding:53px 0 24px;text-align:center;borde
 <h1>Building <span>Trust.</span><br>Creating <em>Spaces.</em></h1>
 <p class="hero-copy">Onkar Buildwell delivers dependable Ready Mix Concrete and construction material solutions for projects across Amritsar and Batala — with a focus on quality, consistency and professional service.</p>
 <div class="actions"><a class="btn btn-gold" href="#enquiry">REQUEST A QUOTE</a><a class="btn btn-ghost" href="#rmc">EXPLORE RMC</a></div>
-<div class="hero-meta"><div class="meta"><strong>RMC</strong><span>READY MIX CONCRETE</span></div><div class="meta"><strong>02</strong><span>LOCATIONS</span></div><div class="meta"><strong>01</strong><span>FOCUSED STANDARD</span></div></div>
+<div class="hero-stats">
+  <div class="hero-stat"><strong><span class="counter" data-target="4">0</span>+</strong><small>CONCRETE GRADES</small></div>
+  <div class="hero-stat"><strong><span class="counter" data-target="2">0</span></strong><small>LOCATIONS</small></div>
+  <div class="hero-stat"><strong><span class="counter" data-target="98">0</span><span>%</span></strong><small>ON-TIME DELIVERY*</small></div>
+</div>
+<p style="font-size:7px;color:#718b99;margin-top:8px">*Service-performance target; actual delivery depends on project and site conditions.</p>
 </div>
 <div class="hero-visual reveal" id="heroVisual">
 <div class="visual-glow"></div><div class="grid-floor"></div>
@@ -235,6 +339,90 @@ footer{background:#02131f;color:#fff;padding:53px 0 24px;text-align:center;borde
 </div>
 </section>
 
+
+<section class="section" id="grades" style="background:#fff">
+  <div class="container">
+    <div class="section-head center-head reveal">
+      <div class="eyebrow">02A — CONCRETE GRADE GUIDE</div>
+      <h2 class="section-title">Choose the right <em>grade.</em></h2>
+      <p class="section-text" style="margin-left:auto;margin-right:auto">A quick reference for common nominal concrete grades from M10 to M40. Final grade should be selected according to the structural design and project specification.</p>
+    </div>
+    <div class="grade-wrap reveal">
+      <table class="grade-table">
+        <thead><tr><th>Grade</th><th>Characteristic compressive strength*</th><th>Typical use / reference</th></tr></thead>
+        <tbody>
+          <tr><td>M10</td><td>10 N/mm²</td><td>Blinding, leveling and non-structural applications</td></tr>
+          <tr><td>M15</td><td>15 N/mm²</td><td>General non-critical concrete work</td></tr>
+          <tr><td>M20</td><td>20 N/mm²</td><td>Common structural and residential applications</td></tr>
+          <tr><td>M25</td><td>25 N/mm²</td><td>Higher-strength structural applications</td></tr>
+          <tr><td>M30</td><td>30 N/mm²</td><td>Structural work requiring higher strength</td></tr>
+          <tr><td>M35</td><td>35 N/mm²</td><td>Higher-performance structural concrete</td></tr>
+          <tr><td>M40</td><td>40 N/mm²</td><td>High-strength structural applications</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="grade-note reveal">*Grade values refer to characteristic compressive strength at 28 days. Use the project engineer's approved mix/design specification for final selection.</p>
+  </div>
+</section>
+
+<section class="section" id="calculator">
+  <div class="container calc-grid">
+    <div class="section-head reveal">
+      <div class="eyebrow">02B — CONCRETE VOLUME CALCULATOR</div>
+      <h2 class="section-title">Know your volume<br><em>before you order.</em></h2>
+      <p class="section-text">Enter the length, width and depth of your slab, footing, beam or other rectangular pour. The calculator returns cubic metres so you can send the requirement directly to Onkar Buildwell.</p>
+      <p class="section-text" style="font-size:10px">Formula: Volume = Length × Width × Depth. Enter dimensions in metres.</p>
+    </div>
+    <div class="calculator reveal">
+      <div class="calc-fields">
+        <div class="field"><label>LENGTH (m)</label><input id="calcLength" type="number" min="0" step="0.01" placeholder="e.g. 10"></div>
+        <div class="field"><label>WIDTH (m)</label><input id="calcWidth" type="number" min="0" step="0.01" placeholder="e.g. 5"></div>
+        <div class="field"><label>DEPTH (m)</label><input id="calcDepth" type="number" min="0" step="0.001" placeholder="e.g. 0.15"></div>
+      </div>
+      <div class="calc-result"><div><small>ESTIMATED CONCRETE VOLUME</small><strong id="calcResult">0.00 m³</strong></div><span style="font-size:25px;color:var(--gold2)">▣</span></div>
+      <div class="calc-actions">
+        <button class="btn btn-gold" type="button" onclick="sendCalcToWhatsApp()">SEND THIS TO ONKAR</button>
+        <button class="btn-outline" type="button" onclick="resetCalculator()">RESET</button>
+      </div>
+      <p class="form-note" style="text-align:left">This is an estimate for rectangular geometry; allow for project-specific requirements, wastage and approved mix design when ordering.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:#f4f1e9">
+  <div class="container">
+    <div class="section-head center-head reveal">
+      <div class="eyebrow">02C — WHY ONKAR</div>
+      <h2 class="section-title">Built around what <em>clients need.</em></h2>
+    </div>
+    <div class="usp-grid">
+      <div class="usp reveal"><span class="usp-no">01</span><h3>Consistent Supply</h3><p>Clear coordination around quantities, concrete requirements and project schedules.</p></div>
+      <div class="usp reveal"><span class="usp-no">02</span><h3>Quality Focus</h3><p>Controlled batching and practical quality checks support consistent concrete production.</p></div>
+      <div class="usp reveal"><span class="usp-no">03</span><h3>Local Reach</h3><p>Serving construction requirements across Amritsar, Batala and surrounding areas.</p></div>
+      <div class="usp reveal"><span class="usp-no">04</span><h3>Responsive Service</h3><p>A direct enquiry route for quantities, delivery requirements and project discussions.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="quality" style="background:#fff">
+  <div class="container qa">
+    <div class="reveal">
+      <div class="eyebrow">02D — QUALITY ASSURANCE</div>
+      <h2 class="section-title">Quality checked at<br><em>every stage.</em></h2>
+      <p class="section-text">Our quality-assurance presentation focuses on the checks that matter to an RMC customer: controlled batching, fresh-concrete workability checks and strength verification through cube testing.</p>
+      <div class="qa-badge">BATCHING • SLUMP • CUBE TESTING</div>
+    </div>
+    <div class="qa-card reveal">
+      <div class="qa-list">
+        <div class="qa-item"><strong>Cube Testing</strong><span>Concrete strength verification through test specimens as specified for the project.</span></div>
+        <div class="qa-item"><strong>Slump Checks</strong><span>Fresh concrete workability checked against the required/project specification.</span></div>
+        <div class="qa-item"><strong>Controlled Batching</strong><span>Materials are proportioned and batched with consistency as a key objective.</span></div>
+        <div class="qa-item"><strong>Supply Coordination</strong><span>Attention to quantity, dispatch and site requirements during delivery.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="section section-dark" id="rmc">
 <div class="container process">
 <div class="process-visual reveal">
@@ -271,7 +459,7 @@ footer{background:#02131f;color:#fff;padding:53px 0 24px;text-align:center;borde
 <div class="job reveal"><span class="job-label">SALES REPRESENTATIVE</span><h3>Grow relationships. Grow the business.</h3><p>Business development, customer relationships and timely follow-up.</p><ul><li>Generate new business and leads.</li><li>Build and maintain client relationships.</li><li>Achieve sales targets and contribute to growth.</li><li>Strong communication and negotiation skills.</li><li>Construction/building-material experience preferred.</li></ul><button class="apply" onclick="openJob('Sales Representative')">APPLY FOR SALES REPRESENTATIVE</button></div>
 <div class="job reveal"><span class="job-label">DRIVER</span><h3>Drive safely. Support every project.</h3><p>Safe vehicle operation and timely pick-up/drop of personnel or materials.</p><ul><li>Drive company vehicles safely and responsibly.</li><li>Valid LMV/HMV licence as applicable.</li><li>2–3 years experience preferred.</li><li>Knowledge of roads and traffic rules.</li><li>Punctual, honest and responsible.</li></ul><button class="apply" onclick="openJob('Driver')">APPLY FOR DRIVER</button></div>
 </div>
-<div class="form-panel" id="jobPanel"><h3 id="jobTitle" style="font:700 27px 'Manrope';margin-bottom:17px">Job Application</h3><form id="jobForm"><input type="hidden" id="jobRole"><div class="form-grid"><div class="field"><label>FULL NAME *</label><input id="jName" required></div><div class="field"><label>PHONE NUMBER *</label><input id="jPhone" type="tel" placeholder="+91" required></div><div class="field"><label>EMAIL</label><input id="jEmail" type="email"></div><div class="field"><label>EXPERIENCE</label><input id="jExp"></div><div class="field"><label>LOCATION</label><input id="jLoc"></div><div class="field"><label>DRIVING LICENCE</label><input id="jLicence"></div><div class="field full"><label>ADDITIONAL INFORMATION</label><textarea id="jMessage"></textarea></div></div><div class="form-actions"><button class="send" type="submit">SEND APPLICATION</button><button class="cancel" type="button" onclick="closeJob()">CLOSE</button></div></form></div>
+<div class="form-panel" id="jobPanel" style="display:none"><h3 id="jobTitle" style="font:700 27px 'Manrope';margin-bottom:17px">Job Application</h3><form id="jobForm"><input type="hidden" id="jobRole"><div class="form-grid"><div class="field"><label>FULL NAME *</label><input id="jName" required></div><div class="field"><label>PHONE NUMBER *</label><input id="jPhone" type="tel" placeholder="+91" required></div><div class="field"><label>EMAIL</label><input id="jEmail" type="email"></div><div class="field"><label>EXPERIENCE</label><input id="jExp"></div><div class="field"><label>LOCATION</label><input id="jLoc"></div><div class="field"><label>DRIVING LICENCE</label><input id="jLicence"></div><div class="field full"><label>ADDITIONAL INFORMATION</label><textarea id="jMessage"></textarea></div></div><div class="form-actions"><button class="send" type="submit">SEND APPLICATION</button><button class="cancel" type="button" onclick="closeJob()">CLOSE</button></div></form></div>
 </div>
 </section>
 
@@ -290,22 +478,88 @@ footer{background:#02131f;color:#fff;padding:53px 0 24px;text-align:center;borde
 <div class="field"><label>MATERIAL REQUIRED *</label><select id="cMaterial" required><option value="">Select material</option><option>Ready Mix Concrete (RMC)</option><option>Cement</option><option>Fine Aggregate / M-Sand</option><option>Coarse Aggregate</option><option>Admixtures</option><option>Other construction material</option></select></div>
 <div class="field"><label>QUANTITY</label><input id="cQuantity"></div>
 <div class="field full"><label>PROJECT / REQUIREMENT *</label><textarea id="cMessage" required placeholder="Tell us about your project, material requirement, quantity or preferred contact time..."></textarea></div>
+<div class="field"><label>SEND VIA</label><select id="cSendVia"><option value="whatsapp">WhatsApp</option><option value="email">Email</option></select></div>
 </div><button class="btn btn-gold submit" type="submit">SEND ENQUIRY</button><p class="form-note">Your email application will open with the enquiry details prepared for Onkar Buildwell.</p></form></div>
 </div>
 </section>
+
+<div class="modal-backdrop" id="careerModal" role="dialog" aria-modal="true" aria-labelledby="jobTitleModal">
+  <div class="modal">
+    <div class="modal-head">
+      <button class="modal-close" type="button" onclick="closeJob()" aria-label="Close">×</button>
+      <h3 id="jobTitleModal">Job Application</h3>
+      <p>Apply for the selected role and send your details to Onkar Buildwell.</p>
+    </div>
+    <div class="modal-body">
+      <form id="jobModalForm">
+        <input type="hidden" id="jobRoleModal">
+        <div class="form-grid">
+          <div class="field"><label>FULL NAME *</label><input id="mjName" required></div>
+          <div class="field"><label>PHONE NUMBER *</label><input id="mjPhone" type="tel" placeholder="+91" required></div>
+          <div class="field"><label>EMAIL</label><input id="mjEmail" type="email"></div>
+          <div class="field"><label>EXPERIENCE</label><input id="mjExp"></div>
+          <div class="field"><label>LOCATION</label><input id="mjLoc"></div>
+          <div class="field"><label>DRIVING LICENCE</label><input id="mjLicence"></div>
+          <div class="field full"><label>ADDITIONAL INFORMATION</label><textarea id="mjMessage"></textarea></div>
+        </div>
+        <div class="form-actions">
+          <button class="send" type="submit">SEND APPLICATION</button>
+          <button class="cancel" type="button" onclick="closeJob()">CLOSE</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
 </main>
 
 <footer><img src="OB.png" alt="Onkar Buildwell logo"><div class="footer-title">ONKAR BUILDWELL</div><p>Ready Mix Concrete & Construction Materials</p><p>Amritsar • Batala • Punjab</p><a class="instagram" target="_blank" href="https://www.instagram.com/onkar.buildwell/">Instagram · @onkar.buildwell</a><p>© <span id="year"></span> Onkar Buildwell. All Rights Reserved.</p></footer>
+<a class="whatsapp-float" href="https://wa.me/917087813333?text=Hello%20Onkar%20Buildwell%2C%20I%20would%20like%20to%20make%20an%20enquiry." target="_blank" rel="noopener" aria-label="Chat with Onkar Buildwell on WhatsApp">◔</a>
+<button class="back-top" id="backTop" aria-label="Back to top">↑</button>
 <div class="toast" id="toast"></div>
 
-<script>
-const menu=document.getElementById("menu"),navLinks=document.getElementById("navLinks");
-menu.addEventListener("click",()=>navLinks.classList.toggle("open"));
-document.querySelectorAll(".nav-links a").forEach(a=>a.addEventListener("click",()=>navLinks.classList.remove("open")));
 
-const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting)entry.target.classList.add("visible")}),{threshold:.1});
+<script>
+const menu=document.getElementById("menu");
+const navLinks=document.getElementById("navLinks");
+const drawerBackdrop=document.getElementById("drawerBackdrop");
+const header=document.querySelector("header");
+
+function setDrawer(open){
+  navLinks.classList.toggle("open",open);
+  drawerBackdrop.classList.toggle("open",open);
+  menu.setAttribute("aria-expanded",open ? "true" : "false");
+  menu.textContent=open ? "×" : "☰";
+  document.body.style.overflow=open ? "hidden" : "";
+}
+menu.addEventListener("click",()=>setDrawer(!navLinks.classList.contains("open")));
+drawerBackdrop.addEventListener("click",()=>setDrawer(false));
+document.querySelectorAll(".nav-links a").forEach(a=>a.addEventListener("click",()=>setDrawer(false)));
+
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{if(entry.isIntersecting)entry.target.classList.add("visible")});
+},{threshold:.1});
 document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
 
+/* Sticky shrink + active section highlighting */
+const sectionIds=["home","about","materials","grades","calculator","quality","rmc","locations","careers","enquiry"];
+const sectionLinks=[...document.querySelectorAll(".nav-links a[href^='#']")];
+function updateNav(){
+  header.classList.toggle("scrolled",window.scrollY>35);
+  const y=window.scrollY+130;
+  let current="home";
+  sectionIds.forEach(id=>{
+    const el=document.getElementById(id);
+    if(el && el.offsetTop<=y) current=id;
+  });
+  sectionLinks.forEach(a=>{
+    const id=a.getAttribute("href").slice(1);
+    a.classList.toggle("active",id===current);
+  });
+}
+window.addEventListener("scroll",updateNav,{passive:true});
+updateNav();
+
+/* Hero 3D interaction */
 const heroVisual=document.getElementById("heroVisual"),scene=document.getElementById("engineeringScene");
 heroVisual.addEventListener("pointermove",e=>{
  if(window.innerWidth<760)return;
@@ -313,7 +567,6 @@ heroVisual.addEventListener("pointermove",e=>{
  scene.style.transform=`rotateY(${x*13}deg) rotateX(${-y*8}deg) translateZ(8px)`;
 });
 heroVisual.addEventListener("pointerleave",()=>scene.style.transform="rotateY(0deg) rotateX(0deg)");
-
 let idle=0;
 setInterval(()=>{
  if(window.innerWidth<760 || heroVisual.matches(":hover"))return;
@@ -321,15 +574,97 @@ setInterval(()=>{
  scene.style.transform=`rotateY(${Math.sin(idle)*2.5}deg) rotateX(${Math.cos(idle)*1.2}deg) translateZ(5px)`;
 },50);
 
-function openJob(role){
- document.getElementById("jobPanel").classList.add("open");
- document.getElementById("jobRole").value=role;
- document.getElementById("jobTitle").textContent="Apply for "+role;
- document.getElementById("jobPanel").scrollIntoView({behavior:"smooth",block:"center"});
+/* Animated counters */
+let countersStarted=false;
+function animateCounters(){
+ if(countersStarted)return;
+ countersStarted=true;
+ document.querySelectorAll(".counter").forEach(counter=>{
+   const target=Number(counter.dataset.target);
+   const duration=1300, start=performance.now();
+   function tick(now){
+     const progress=Math.min((now-start)/duration,1);
+     const eased=1-Math.pow(1-progress,3);
+     counter.textContent=Math.round(target*eased);
+     if(progress<1)requestAnimationFrame(tick);
+   }
+   requestAnimationFrame(tick);
+ });
 }
-function closeJob(){document.getElementById("jobPanel").classList.remove("open")}
-function showToast(message){const t=document.getElementById("toast");t.textContent=message;t.classList.add("show");setTimeout(()=>t.classList.remove("show"),4500)}
+const counterObserver=new IntersectionObserver(entries=>{
+ if(entries.some(e=>e.isIntersecting)){animateCounters();counterObserver.disconnect();}
+},{threshold:.35});
+document.querySelectorAll(".hero-stats").forEach(el=>counterObserver.observe(el));
 
+/* Concrete volume calculator */
+function getCalcValues(){
+ const l=parseFloat(document.getElementById("calcLength").value)||0;
+ const w=parseFloat(document.getElementById("calcWidth").value)||0;
+ const d=parseFloat(document.getElementById("calcDepth").value)||0;
+ return {l,w,d,volume:l*w*d};
+}
+function updateCalculator(){
+ const {volume}=getCalcValues();
+ document.getElementById("calcResult").textContent=volume.toFixed(2)+" m³";
+}
+["calcLength","calcWidth","calcDepth"].forEach(id=>document.getElementById(id).addEventListener("input",updateCalculator));
+function resetCalculator(){
+ ["calcLength","calcWidth","calcDepth"].forEach(id=>document.getElementById(id).value="");
+ updateCalculator();
+}
+function sendCalcToWhatsApp(){
+ const {l,w,d,volume}=getCalcValues();
+ if(!l||!w||!d){showToast("Please enter length, width and depth first.");return;}
+ const msg=`Hello Onkar Buildwell,
+
+I would like a concrete requirement enquiry.
+
+Length: ${l} m
+Width: ${w} m
+Depth: ${d} m
+Estimated Volume: ${volume.toFixed(2)} m³
+
+Please advise on the suitable concrete grade, quantity and delivery.`;
+ window.open("https://wa.me/917087813333?text="+encodeURIComponent(msg),"_blank");
+}
+
+/* Career modal: clicked role is pre-selected */
+function openJob(role){
+ document.getElementById("careerModal").classList.add("open");
+ document.getElementById("jobRoleModal").value=role;
+ document.getElementById("jobTitleModal").textContent="Apply for "+role;
+ document.getElementById("mjLicence").closest(".field").style.display=role==="Driver" ? "flex" : "none";
+ setTimeout(()=>document.getElementById("mjName").focus(),100);
+}
+function closeJob(){
+ document.getElementById("careerModal").classList.remove("open");
+}
+document.getElementById("careerModal").addEventListener("click",e=>{
+ if(e.target.id==="careerModal")closeJob();
+});
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeJob()});
+
+document.getElementById("jobModalForm").addEventListener("submit",e=>{
+ e.preventDefault();
+ const role=document.getElementById("jobRoleModal").value;
+ const body=`JOB APPLICATION — ONKAR BUILDWELL
+
+Position: ${role}
+Name: ${mjName.value}
+Phone: ${mjPhone.value}
+Email: ${mjEmail.value||"Not provided"}
+Experience: ${mjExp.value||"Not provided"}
+Location: ${mjLoc.value||"Not provided"}
+Driving Licence: ${mjLicence.value||"Not provided"}
+
+Additional Information:
+${mjMessage.value||"Not provided"}`;
+ window.location.href="mailto:onkarbuildwell1@gmail.com?subject="+encodeURIComponent("Job Application - "+role)+"&body="+encodeURIComponent(body);
+ showToast("Your email application is opening with the application details.");
+ closeJob();
+});
+
+/* Customer enquiry: WhatsApp OR email */
 document.getElementById("customerForm").addEventListener("submit",e=>{
  e.preventDefault();
  const body=`NEW CUSTOMER ENQUIRY — ONKAR BUILDWELL
@@ -343,28 +678,30 @@ Quantity: ${cQuantity.value||"Not specified"}
 
 Project / Requirement:
 ${cMessage.value}`;
- window.location.href="mailto:onkarbuildwell1@gmail.com?subject="+encodeURIComponent("New Customer Enquiry - Onkar Buildwell")+"&body="+encodeURIComponent(body);
- showToast("Your email application is opening with the enquiry details.");
+ const via=document.getElementById("cSendVia").value;
+ if(via==="whatsapp"){
+   window.open("https://wa.me/917087813333?text="+encodeURIComponent(body),"_blank");
+   showToast("WhatsApp is opening with your enquiry prepared.");
+ }else{
+   window.location.href="mailto:onkarbuildwell1@gmail.com?subject="+encodeURIComponent("New Customer Enquiry - Onkar Buildwell")+"&body="+encodeURIComponent(body);
+   showToast("Your email application is opening with the enquiry details.");
+ }
 });
 
-document.getElementById("jobForm").addEventListener("submit",e=>{
- e.preventDefault();
- const body=`JOB APPLICATION — ONKAR BUILDWELL
+/* Back to top */
+const backTop=document.getElementById("backTop");
+window.addEventListener("scroll",()=>{
+ backTop.classList.toggle("show",window.scrollY>600);
+},{passive:true});
+backTop.addEventListener("click",()=>window.scrollTo({top:0,behavior:"smooth"}));
 
-Position: ${jobRole.value}
-Name: ${jName.value}
-Phone: ${jPhone.value}
-Email: ${jEmail.value||"Not provided"}
-Experience: ${jExp.value||"Not provided"}
-Location: ${jLoc.value||"Not provided"}
-Driving Licence: ${jLicence.value||"Not provided"}
-
-Additional Information:
-${jMessage.value||"Not provided"}`;
- window.location.href="mailto:onkarbuildwell1@gmail.com?subject="+encodeURIComponent("Job Application - "+jobRole.value)+"&body="+encodeURIComponent(body);
- showToast("Your email application is opening with the application details.");
-});
+function showToast(message){
+ const t=document.getElementById("toast");
+ t.textContent=message;t.classList.add("show");
+ setTimeout(()=>t.classList.remove("show"),4500);
+}
 document.getElementById("year").textContent=new Date().getFullYear();
 </script>
+
 </body>
 </html>
